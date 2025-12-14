@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+
+<html lang="es">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<title>TUFARMA | Clínica, Farmacia y Distribuidora</title>
+<meta content="Clínica y farmacia con enfoque en bienestar, estética y cuidado especializado. Servicios, distribuidora y procesos en un solo lugar." name="description"/>
+<link as="style" href="assets/css/style.css" rel="preload"/>
+<link href="assets/css/style.css" rel="stylesheet"/>
+</head>
+<body>
+<!-- Topbar -->
+<header class="topbar">
+<div class="container">
+<div class="navWrap">
+<a aria-label="Ir a inicio" class="brand" href="#inicio">
+<img alt="TUFARMA" class="brandLogo" src="assets/img/tufarma-logo.png"/>
+</a>
+<nav aria-label="Navegación principal" class="nav">
+<a href="#inicio">Inicio</a>
+<a href="#clinica">Clínica</a>
+<a href="#farmacia">Farmacia</a>
+<a href="#distribuidora">Distribuidora</a>
+<a href="#procesos">Procesos</a>
+<a href="#contacto">Contacto</a>
+</nav>
+<button aria-expanded="false" aria-label="Abrir menú" class="menuBtn" id="menuBtn">≡</button>
+</div>
+<nav aria-label="Navegación móvil" class="mobileNav" id="mobileNav">
+<a href="#inicio">Inicio</a>
+<a href="#clinica">Clínica</a>
+<a href="#farmacia">Farmacia</a>
+<a href="#distribuidora">Distribuidora</a>
+<a href="#procesos">Procesos</a>
+<a href="#contacto">Contacto</a>
+</nav>
+</div>
+</header>
+<!-- Hero -->
+<main class="hero" id="inicio">
+<div class="container">
+<div class="heroGrid">
+<div class="reveal">
+<div class="heroBadge"><span class="dot"></span> ATENCIÓN INTEGRAL</div>
+<h1 class="heroTitle">Clínica y farmacia con enfoque en bienestar, estética y cuidado especializado.</h1>
+<p class="heroSubtitle">
+            Una experiencia moderna, clara y profesional para que tus pacientes encuentren
+            <strong>servicios</strong>, <strong>productos</strong> y <strong>procesos</strong> en un solo lugar.
+          </p>
+<div class="btnRow">
+<a class="btn primary" href="#clinica">Ver servicios</a>
+<a class="btn" href="#distribuidora">Ver distribuidora</a>
+<a class="btn ghost" href="#procesos">Ver procesos</a>
+</div>
+<div class="featureGrid">
+<div class="card reveal">
+<div class="icon">✓</div>
+<h3>Atención &amp; confianza</h3>
+<p>Navegación simple, diseño limpio y secciones claras para pacientes.</p>
+</div>
+<div class="card reveal">
+<div class="icon">▦</div>
+<h3>Servicios bien explicados</h3>
+<p>Catálogo ordenado con detalle y botones para solicitar información.</p>
+</div>
+<div class="card reveal">
+<div class="icon">⬇</div>
+<h3>Descargables</h3>
+<p>PDFs de servicios y folletos de productos (listos para compartir).</p>
+</div>
+</div>
+</div>
+<div aria-label="Portada multimedia" class="heroCard reveal">
+<video autoplay="" loop="" muted="" playsinline="">
+<source src="assets/videos/hero-bg.mp4" type="video/mp4"/>
+</video>
+<div aria-hidden="true" class="heroSlides">
+<img alt="" class="active" src="assets/img/slide-1.svg"/>
+<img alt="" src="assets/img/slide-2.svg"/>
+<img alt="" src="assets/img/slide-3.svg"/>
+</div>
+<div class="overlay"></div>
+<div class="heroMini">
+<div aria-label="Áreas" class="pills">
+<span class="pill">Medicina estética</span>
+<span class="pill">Farmacia</span>
+<span class="pill">Distribuidora</span>
+</div>
+<div aria-label="Controles de carrusel" class="controls">
+<button aria-label="Anterior" class="iconBtn" id="slidePrev" type="button">‹</button>
+<button aria-label="Siguiente" class="iconBtn" id="slideNext" type="button">›</button>
+</div>
+</div>
+</div>
+</div>
+</div>
+</main>
+<!-- Clínica -->
+<section class="section" id="clinica">
+<div class="container">
+<span class="kicker">MEDICINA ESTÉTICA</span>
+<h2 class="h2">Catálogo de servicios</h2>
+<p class="lead">Selecciona un servicio para ver detalles. Todo es editable desde <strong>assets/js/app.js</strong> (sin tocar el diseño).</p>
+<div class="split">
+<div class="panel reveal">
+<div class="panelHead">
+<strong>Servicios de clínica</strong>
+<div class="btnRow" style="margin:0">
+<a class="btn small" href="assets/pdf/servicios_ocuderm.pdf" rel="noopener" target="_blank">Descargar PDF</a>
+<a class="btn small primary" data-wa="Hola, quiero agendar una valoración.">Agendar por WhatsApp</a>
+</div>
+</div>
+<div class="panelBody" id="servicesAccordion">
+<!-- JS mount -->
+</div>
+</div>
+<div class="reveal">
+<div class="card">
+<div class="icon">★</div>
+<h3>Protocolos personalizados</h3>
+<p>Te presentamos una estructura clara: explicación simple, beneficios y seguimiento.</p>
+<div class="tagRow">
+<span class="tag">Manchas</span>
+<span class="tag">Poros</span>
+<span class="tag">Rejuvenecimiento</span>
+<span class="tag">Várices</span>
+</div>
+</div>
+<div class="ctaBox reveal">
+<div class="inner">
+<div>
+<strong>¿Necesitas cotización o evaluación?</strong>
+<p>Podemos dirigir al paciente a WhatsApp con un mensaje automático para que tu equipo responda más rápido.</p>
+</div>
+<a class="btn primary" data-wa="Hola, me gustaría una cotización / valoración.">Abrir WhatsApp</a>
+</div>
+</div>
+<div style="height:16px"></div>
+
+</div>
+</div>
+</div>
+</section>
+<!-- Farmacia -->
+<section class="section alt" id="farmacia">
+<div class="container">
+<span class="kicker">FARMACIA</span>
+<h2 class="h2">Atención y surtido</h2>
+<p class="lead">Sección pensada para describir tu farmacia, categorías y beneficios. Si me dices tus categorías reales, las dejo exactas.</p>
+<div class="grid3">
+<div class="card reveal">
+<div class="icon">Rx</div>
+<h3>Recetas y seguimiento</h3>
+<p>Apoyo al paciente con indicaciones claras y continuidad de tratamiento.</p>
+</div>
+<div class="card reveal">
+<div class="icon">⚕</div>
+<h3>Medicamentos</h3>
+<p>Inventario y orientación para productos básicos y especializados.</p>
+<a class="btn small ghost" href="#catalogo-medicamentos" style="margin-top:10px; display:inline-flex">Ver catálogo</a>
+</div>
+<div class="card reveal">
+<div class="icon">☘</div>
+<h3>Dermocosmética</h3>
+<p>Rutinas de cuidado, hidratación, protección y antioxidantes.</p>
+</div>
+</div>
+<div class="panel reveal" style="margin-top:22px" id="catalogo-medicamentos">
+  <div class="panelHead">
+    <strong>Catálogo de medicamentos</strong>
+    <div class="btnRow" style="margin:0">
+      <a class="btn small primary" data-wa="Hola, quiero precio y disponibilidad de un medicamento.">Pedir por WhatsApp</a>
+    </div>
+  </div>
+  <div class="panelBody">
+    <!-- Vista rápida (carrusel) -->
+    <div class="medPreview">
+      <div class="medCarouselWrap" aria-label="Carrusel de medicamentos">
+        <button class="carBtn prev" type="button" id="medPrev" aria-label="Anterior">‹</button>
+        <div class="medCarousel" id="medsCarousel"><!-- JS mount (5 items) --></div>
+        <button class="carBtn next" type="button" id="medNext" aria-label="Siguiente">›</button>
+      </div>
+      <div class="medMoreRow">
+        <button class="btn small" type="button" id="toggleMeds">Ver catálogo completo</button>
+      </div>
+    </div>
+
+    <!-- Catálogo completo (colapsable) -->
+    <div class="medFull" id="medFull" hidden>
+    <div class="searchRow">
+      <input id="medSearch" type="search" placeholder="Buscar medicamento (ej. ACICLOVIR, METFORMINA, OMEPRAZOL)…" autocomplete="off"/>
+      <span class="chip" id="medCount">0 medicamentos</span>
+    </div>
+    <div class="medGrid" id="medsGrid"><!-- JS mount --></div>
+    </div>
+  </div>
+</div>
+</div>
+</section>
+<!-- Distribuidora -->
+<section class="section" id="distribuidora">
+<div class="container">
+<span class="kicker">DISTRIBUIDORA</span>
+<h2 class="h2">Belleza y belleza íntima</h2>
+<p class="lead">Productos con información clara y descargables. Incluye una sección dedicada a líneas como <strong>Íntimo Renovacell</strong>.</p>
+<div class="split">
+<div class="reveal">
+<div class="card">
+<div class="icon">◎</div>
+<h3>Producto destacado: Íntimo Renovacell</h3>
+<p>
+              Peeling tópico de blanqueamiento y rejuvenecimiento. Contenido informativo; seguir la indicación médica y el folleto.
+            </p>
+<div class="btnRow">
+<a class="btn small" href="assets/pdf/folleto_intimo_renovacell.pdf" rel="noopener" target="_blank">Ver PDF</a>
+<a class="btn small primary" data-wa="Hola, quiero información sobre Íntimo Renovacell.">Solicitar información</a>
+</div>
+<div class="tagRow">
+<span class="tag">pH 3.5–4.0</span>
+<span class="tag">Uso semanal</span>
+<span class="tag">Zonas específicas</span>
+</div>
+</div>
+<div style="height:16px"></div>
+
+</div>
+<div>
+<div class="grid2" id="distribGrid">
+<!-- JS mount -->
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Procesos / Videos -->
+<section class="section alt" id="procesos">
+<div class="container">
+<span class="kicker">PROCESOS</span>
+<h2 class="h2">Procesos clasificados</h2>
+<p class="lead">Sección para mostrar procedimientos (informativos) y resultados de forma ordenada.</p>
+<div class="grid2" id="procesosGrid">
+<!-- JS mount -->
+</div>
+
+</div>
+</section>
+<!-- Contacto -->
+<section class="section" id="contacto">
+<div class="container">
+<span class="kicker">CONTACTO</span>
+<h2 class="h2">¿Te ayudamos a agendar o cotizar?</h2>
+<p class="lead">Edita número, ubicación, horario y correo en <strong>assets/js/app.js</strong> para que quede con tus datos reales.</p>
+<div class="grid3">
+<div class="card reveal">
+<div class="icon">WA</div>
+<h3>WhatsApp</h3>
+<p id="waNumber">+52 55 0000 0000</p>
+<div class="btnRow"><a class="btn small primary" data-wa="Hola, quiero agendar / cotizar.">Abrir WhatsApp</a></div>
+</div>
+<div class="card reveal">
+<div class="icon">⌂</div>
+<h3>Ubicación</h3>
+<p id="locText">CDMX / Edo. Méx</p>
+<div class="tagRow"><span class="tag">Editable</span></div>
+</div>
+<div class="card reveal">
+<div class="icon">⏱</div>
+<h3>Horario</h3>
+<p id="schText">Lun–Sáb 9:00–18:00</p>
+<p class="small" style="margin-top:8px; color:var(--muted)"><span style="font-weight:900">Correo:</span> <span id="mailText">contacto@tufarma.com</span></p>
+</div>
+</div>
+<div class="ctaBox reveal mapBox">
+<div class="inner">
+<div>
+<strong>Mapa</strong>
+<p class="small" style="margin:6px 0 12px; color:var(--muted)">Centro de Especialidades Médicas</p>
+<div class="mapEmbed">
+  <iframe
+    title="Ubicación en Google Maps"
+    src="https://www.google.com/maps?q=19.4069763,-99.1678865&z=17&output=embed"
+    width="100%"
+    loading="lazy"
+    referrerpolicy="no-referrer-when-downgrade"
+    allowfullscreen>
+  </iframe>
+</div>
+</div>
+<a class="btn" href="https://maps.app.goo.gl/wzUEdpceMHR3ehKY7" target="_blank" rel="noopener">Abrir en Maps</a>
+</div>
+</div>
+<p class="small" style="margin-top:18px; color:var(--muted)">
+        Aviso: La información de esta página es informativa y no sustituye la valoración médica. Los resultados pueden variar.
+      </p>
+</div>
+</section>
+<footer class="footer">
+<div class="container">
+<div class="footerRow">
+<div class="small">© <span id="year"></span> TUFARMA. Todos los derechos reservados.</div>
+<div class="small">Inicio · Servicios · Distribuidora · Contacto</div>
+</div>
+</div>
+</footer>
+<!-- WhatsApp Floating -->
+<div aria-label="Acceso rápido WhatsApp" class="whats">
+<div class="hint">¿Dudas o cotización? Escríbenos por WhatsApp.</div>
+<a class="fab" data-wa="Hola, me gustaría información general de TUFARMA.">
+<span style="font-size:18px">💬</span> WhatsApp
+    </a>
+</div>
+<script src="assets/js/app.js"></script>
+</body>
+</html>
