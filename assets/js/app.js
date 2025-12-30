@@ -2,9 +2,10 @@
    Configura datos rápidos aquí: WhatsApp, textos, etc.
 */
 const CONFIG = {
-  whatsappNumberE164: "+525500000000", // <- CAMBIA AQUÍ tu número real (con +52)
+  // WhatsApp en formato E.164 (México +52). Ej: 5540172431 -> +525540172431
+  whatsappNumberE164: "+525540172431",
   whatsappDefaultMessage: "Hola, me gustaría solicitar información sobre los servicios de TUFARMA.",
-  locationText: "CDMX / Edo. Méx",
+  locationText: "Tuxpan 10, Col. Roma Sur, Cuauhtémoc, CDMX. Piso 2, consultorio 204.",
   scheduleText: "Lun–Sáb 9:00–18:00",
   emailText: "contacto@tufarma.com"
 };
@@ -1057,6 +1058,20 @@ function waLink(message){
   return `https://wa.me/${num.replace("+","")}?text=${text}`;
 }
 
+function formatWhatsAppDisplay(numE164){
+  const digits = String(numE164 || "").replace(/\D/g, "");
+  // México: 52 + 10 dígitos
+  if(digits.startsWith("52") && digits.length === 12){
+    const local = digits.slice(2);
+    return `+52 ${local.slice(0,2)} ${local.slice(2,6)} ${local.slice(6,10)}`;
+  }
+  // 10 dígitos sin país
+  if(digits.length === 10){
+    return `${digits.slice(0,2)} ${digits.slice(2,6)} ${digits.slice(6,10)}`;
+  }
+  return String(numE164 || "");
+}
+
 function qs(sel, parent=document){ return parent.querySelector(sel); }
 function qsa(sel, parent=document){ return [...parent.querySelectorAll(sel)]; }
 
@@ -1092,7 +1107,7 @@ function initWhatsApp(){
     b.setAttribute("rel","noopener");
   });
   const num = qs("#waNumber");
-  if(num) num.textContent = CONFIG.whatsappNumberE164;
+  if(num) num.textContent = formatWhatsAppDisplay(CONFIG.whatsappNumberE164);
   const loc = qs("#locText"); if(loc) loc.textContent = CONFIG.locationText;
   const sch = qs("#schText"); if(sch) sch.textContent = CONFIG.scheduleText;
   const mail = qs("#mailText"); if(mail) mail.textContent = CONFIG.emailText;
