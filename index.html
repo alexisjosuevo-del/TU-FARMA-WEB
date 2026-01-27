@@ -19,6 +19,7 @@
 </a>
 <nav aria-label="Navegación principal" class="nav">
 <a href="#inicio">Inicio</a>
+<a href="#sobre-nosotros">Sobre nosotros</a>
 <a href="#clinica">Clínica</a>
 <a href="#farmacia">Farmacia</a>
 <a href="#distribuidora">Distribuidora</a>
@@ -29,6 +30,7 @@
 </div>
 <nav aria-label="Navegación móvil" class="mobileNav" id="mobileNav">
 <a href="#inicio">Inicio</a>
+<a href="#sobre-nosotros">Sobre nosotros</a>
 <a href="#clinica">Clínica</a>
 <a href="#farmacia">Farmacia</a>
 <a href="#distribuidora">Distribuidora</a>
@@ -38,11 +40,33 @@
 </div>
 </header>
 <!-- Hero -->
-<main class="hero" id="inicio">
-<div class="container">
-<div class="heroGrid">
-<div class="reveal">
-<div class="heroBadge"><span class="dot"></span> ATENCIÓN INTEGRAL</div>
+<main class="hero heroVideo" id="inicio">
+  <div aria-label="Portada multimedia" class="heroMedia">
+    <video autoplay="" loop="" muted="" playsinline="">
+<source src="assets/videos/hero-bg.mp4" type="video/mp4"/>
+</video>
+<div aria-hidden="true" class="heroSlides">
+<img alt="" class="active" src="assets/img/slide-1.svg"/>
+<img alt="" src="assets/img/slide-2.svg"/>
+<img alt="" src="assets/img/slide-3.svg"/>
+</div>
+<div class="overlay"></div>
+<div class="heroMini">
+<div aria-label="Áreas" class="pills">
+<span class="pill">Medicina estética</span>
+<span class="pill">Farmacia</span>
+<span class="pill">Distribuidora</span>
+</div>
+<div aria-label="Controles de carrusel" class="controls">
+<button aria-label="Anterior" class="iconBtn" id="slidePrev" type="button">‹</button>
+<button aria-label="Siguiente" class="iconBtn" id="slideNext" type="button">›</button>
+</div>
+</div>
+</div>
+  <div class="container">
+    <div class="heroOverlay">
+      <div class="reveal">
+        <div class="heroBadge"><span class="dot"></span> ATENCIÓN INTEGRAL</div>
 <h1 class="heroTitle">Clínica y farmacia con enfoque en bienestar, estética y cuidado especializado.</h1>
 <p class="heroSubtitle">
             Una experiencia moderna, clara y profesional para que tus pacientes encuentren
@@ -65,32 +89,34 @@
 <p>Catálogo ordenado con detalle y botones para solicitar información.</p>
 </div>
 </div>
-</div>
-<div aria-label="Portada multimedia" class="heroCard reveal">
-<video autoplay="" loop="" muted="" playsinline="">
-<source src="assets/videos/hero-bg.mp4" type="video/mp4"/>
-</video>
-<div aria-hidden="true" class="heroSlides">
-<img alt="" class="active" src="assets/img/slide-1.svg"/>
-<img alt="" src="assets/img/slide-2.svg"/>
-<img alt="" src="assets/img/slide-3.svg"/>
-</div>
-<div class="overlay"></div>
-<div class="heroMini">
-<div aria-label="Áreas" class="pills">
-<span class="pill">Medicina estética</span>
-<span class="pill">Farmacia</span>
-<span class="pill">Distribuidora</span>
-</div>
-<div aria-label="Controles de carrusel" class="controls">
-<button aria-label="Anterior" class="iconBtn" id="slidePrev" type="button">‹</button>
-<button aria-label="Siguiente" class="iconBtn" id="slideNext" type="button">›</button>
-</div>
-</div>
-</div>
-</div>
-</div>
+      </div>
+    </div>
+  </div>
 </main>
+
+<!-- Sobre nosotros -->
+<section class="section" id="sobre-nosotros">
+  <div class="container">
+    <span class="kicker">SOBRE NOSOTROS</span>
+    <h2 class="h2">Dra. Daniela Carmona González</h2>
+    <div class="aboutGrid">
+      <div class="aboutPhotoWrap reveal">
+        <img class="aboutPhoto" src="assets/img/dra-daniela-carmona.png" alt="Dra. Daniela Carmona González" />
+      </div>
+      <div class="aboutCard reveal">
+        <p>Soy la Dra. Daniela Carmona González, Médica Cirujana egresada de la Facultad de Medicina de la UNAM, con experiencia en atención médica integral y un enfoque en medicina general y estética.</p>
+        <p>Mi formación clínica se ha desarrollado en instituciones de referencia en la Ciudad de México, como el Instituto Nacional de Cancerología, hospitales de PEMEX y hospitales generales, lo que me ha permitido adquirir una visión médica sólida, ética y centrada en el bienestar del paciente.</p>
+        <p>Cuento con formación en investigación médica, participando activamente en proyectos relacionados con la respuesta inmune y la neuroinflamación, así como en la publicación de artículos científicos en revistas internacionales. Esto respalda mi compromiso con una práctica médica basada en evidencia, segura y actualizada.</p>
+        <p>He complementado mi preparación con estancias académicas internacionales en Estados Unidos y formación continua en congresos y cursos médicos, manteniéndome en constante actualización.</p>
+        <p>En mi consulta ofrezco atención personalizada en medicina general y estética, enfocada en la prevención, el cuidado de la salud, la armonización estética y el bienestar integral, siempre con un trato profesional, humano y empático.</p>
+        <div class="btnRow" style="margin-top:14px">
+          <a class="btn primary" data-wa="Hola Dra. Daniela, me gustaría agendar una consulta / valoración.">Agendar por WhatsApp</a>
+          <a class="btn" href="#clinica">Ver medicina estética</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 <!-- Clínica -->
 <section class="section" id="clinica">
 <div class="container">
