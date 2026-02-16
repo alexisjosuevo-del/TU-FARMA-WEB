@@ -6,10 +6,30 @@
 <meta content="width=device-width, initial-scale=1" name="viewport"/>
 <title>TUFARMA | Clínica, Farmacia y Distribuidora</title>
 <meta content="Clínica y farmacia con enfoque en bienestar, estética y cuidado especializado. Servicios, distribuidora y procesos en un solo lugar." name="description"/>
+<link rel="icon" href="favicon.ico" sizes="any"/>
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png"/>
+<link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png"/>
+<link rel="apple-touch-icon" href="apple-touch-icon.png"/>
+<link rel="manifest" href="site.webmanifest"/>
+<meta content="#ffffff" name="theme-color"/>
 <link as="style" href="assets/css/style.css" rel="preload"/>
 <link href="assets/css/style.css" rel="stylesheet"/>
 </head>
 <body>
+
+<!-- Intro Video Modal -->
+<div id="introModal" class="tf-modal tf-modal--open" role="dialog" aria-modal="true" aria-label="Video de bienvenida">
+  <div class="tf-modal__backdrop" data-tf-close="1" aria-hidden="true"></div>
+  <div class="tf-modal__panel" role="document">
+    <button class="tf-modal__close" type="button" aria-label="Cerrar" data-tf-close="1">×</button>
+    <video id="introVideo" class="tf-modal__video" src="assets/videos/video_tufarma_logo_grande_compat.mp4" autoplay muted playsinline></video>
+    <div class="tf-modal__actions">
+      <a class="btn primary tf-modal__cta" data-wa="Hola, quiero saber más de TuFarma. ¿Me apoyas con información?">Quiero saber más</a>
+    </div>
+  </div>
+</div>
+
+
 <!-- Topbar -->
 <header class="topbar">
 <div class="container">
@@ -150,13 +170,18 @@
 <div class="ctaBox reveal">
 <div class="inner">
 <div>
-<strong>¿Necesitas cotización o evaluación?</strong>
-<p>Podemos dirigir al paciente a WhatsApp con un mensaje automático para que tu equipo responda más rápido.</p>
+<strong>¿Dudas o cotización? Te ayudamos.</strong>
+<p>Escríbenos por WhatsApp y te respondemos rápido con la información que necesitas.</p>
 </div>
 <a class="btn primary" data-wa="Hola, me gustaría una cotización / valoración.">Abrir WhatsApp</a>
 </div>
 </div>
 <div style="height:16px"></div>
+
+<div class="videoBox reveal" aria-label="Video informativo de TuFarma">
+  <video id="clinicVideo" class="videoBox__video" src="assets/videos/251210.mp4" autoplay muted loop playsinline></video>
+</div>
+
 
 </div>
 </div>
