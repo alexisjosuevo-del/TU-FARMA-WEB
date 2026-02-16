@@ -1339,3 +1339,46 @@ function boot(){
 }
 
 document.addEventListener("DOMContentLoaded", boot);
+
+
+/* =========================
+   Intro Video Modal (TUFARMA)
+   ========================= */
+(function(){
+  const modal = document.getElementById("introModal");
+  const video = document.getElementById("introVideo");
+  if(!modal || !video) return;
+
+  const openModal = () => {
+    modal.classList.add("tf-modal--open");
+    document.body.classList.add("tf-no-scroll");
+    // Attempt autoplay (muted) - some browsers may still block
+    const p = video.play();
+    if (p && typeof p.catch === "function") p.catch(() => {});
+  };
+
+  const closeModal = () => {
+    modal.classList.remove("tf-modal--open");
+    document.body.classList.remove("tf-no-scroll");
+    try{ video.pause(); }catch(e){}
+  };
+
+  // Close buttons / backdrop
+  modal.addEventListener("click", (e) => {
+    const target = e.target;
+    if (target && target.getAttribute && target.getAttribute("data-tf-close") === "1") {
+      closeModal();
+    }
+  });
+
+  // ESC key
+  document.addEventListener("keydown", (e) => {
+    if(e.key === "Escape" && modal.classList.contains("tf-modal--open")) closeModal();
+  });
+
+  // Nota: No se autocierra al terminar el video; el usuario lo cierra con la X.
+
+  // Ensure it opens on load (in case CSS/JS order changes)
+  window.addEventListener("load", openModal, { once:true });
+})();
+
