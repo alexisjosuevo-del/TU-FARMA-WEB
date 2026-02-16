@@ -511,3 +511,137 @@ img{max-width:100%; display:block}
   .aboutGrid{grid-template-columns:1fr}
   .aboutPhoto{min-height:340px}
 }
+
+
+/* =========================
+   Intro Video Modal (TUFARMA)
+   ========================= */
+body.tf-no-scroll{ overflow:hidden; }
+
+.tf-modal{
+  position:fixed;
+  inset:0;
+  z-index:9999;
+  display:none;
+  align-items:center;
+  justify-content:center;
+  padding:18px;
+}
+
+.tf-modal--open{ display:flex; }
+
+.tf-modal__backdrop{
+  position:absolute;
+  inset:0;
+  background:rgba(0,0,0,.62);
+  backdrop-filter: blur(2px);
+}
+
+.tf-modal__panel{
+  position:relative;
+  /* Smaller, more understandable modal size */
+  width: min(720px, 92vw);
+  max-height: 78vh;
+  background:#fff;
+  border-radius:18px;
+  overflow:hidden;
+  box-shadow: 0 18px 60px rgba(0,0,0,.35);
+  transform: translateZ(0);
+}
+
+.tf-modal__video{
+  width:100%;
+  height:auto;
+  display:block;
+  background:#000;
+  /* Keep the video from taking the whole screen */
+  max-height: 64vh;
+  object-fit: contain;
+}
+
+
+.tf-modal__actions{
+  padding:12px 14px 14px;
+  display:flex;
+  justify-content:center;
+  gap:10px;
+  background:#fff;
+  border-top:1px solid rgba(0,0,0,.06);
+}
+
+.tf-modal__cta{
+  width:100%;
+  max-width:340px;
+  justify-content:center;
+}
+
+
+.tf-modal__close{
+  position:absolute;
+  top:10px;
+  right:10px;
+  width:44px;
+  height:44px;
+  border:none;
+  border-radius:999px;
+  background:rgba(0,0,0,.55);
+  color:#fff;
+  font-size:30px;
+  line-height:44px;
+  cursor:pointer;
+}
+
+.tf-modal__close:hover{ background:rgba(0,0,0,.70); }
+
+@media (max-width: 520px){
+  .tf-modal{ padding:14px; }
+  .tf-modal__panel{ width:94vw; max-height:70vh; border-radius:16px; }
+  .tf-modal__video{ max-height:56vh; }
+  .tf-modal__close{ top:8px; right:8px; width:40px; height:40px; line-height:40px; font-size:28px; }
+}
+
+
+/* Hide native video controls (keep the modal clean) */
+#introVideo{
+  pointer-events: none; /* prevents tap-to-show controls on mobile */
+}
+#introVideo::-webkit-media-controls,
+#introVideo::-webkit-media-controls-enclosure,
+#introVideo::-webkit-media-controls-panel,
+#introVideo::-webkit-media-controls-play-button,
+#introVideo::-webkit-media-controls-start-playback-button{
+  display:none !important;
+  -webkit-appearance:none;
+}
+
+
+/* Clinic section: video in the right column */
+.videoBox{
+  border:1px solid var(--line);
+  border-radius:var(--radius);
+  background:#000;
+  overflow:hidden;
+  box-shadow:var(--shadow2);
+}
+.videoBox__video{
+  width:100%;
+  height:auto;
+  display:block;
+  background:#000;
+  max-height:520px;
+  object-fit:cover;
+}
+@media (max-width: 520px){
+  .videoBox__video{ max-height:320px; object-fit:contain; }
+}
+
+/* Hide native controls (clean look) */
+#clinicVideo{ pointer-events:none; }
+#clinicVideo::-webkit-media-controls,
+#clinicVideo::-webkit-media-controls-enclosure,
+#clinicVideo::-webkit-media-controls-panel,
+#clinicVideo::-webkit-media-controls-play-button,
+#clinicVideo::-webkit-media-controls-start-playback-button{
+  display:none !important;
+  -webkit-appearance:none;
+}
