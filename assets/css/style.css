@@ -59,6 +59,7 @@ img{max-width:100%; display:block}
   border-bottom:1px solid rgba(230,235,242,.9);
 }
 .navWrap{display:flex; align-items:center; justify-content:space-between; padding:14px 0}
+.navRight{display:flex; align-items:center; gap:12px}
 .brand{display:flex; align-items:center; gap:12px; min-width:unset}
 .brand img{
   /* Logo más grande (sin estirar) */
@@ -77,6 +78,24 @@ img{max-width:100%; display:block}
 }
 .nav a:hover{background:var(--surface); color:var(--text)}
 .menuBtn{display:none}
+
+.socialLinks{display:flex; gap:10px; align-items:center}
+.socialBtn{
+  display:inline-flex; align-items:center; justify-content:center;
+  width:38px; height:38px;
+  border-radius:12px;
+  border:1px solid var(--line);
+  background:#fff;
+  color:var(--primary);
+  box-shadow: 0 8px 18px rgba(2,12,27,.06);
+  transition: transform .18s ease, box-shadow .18s ease, border-color .18s ease, color .18s ease;
+}
+.socialBtn:hover{
+  transform:translateY(-1px);
+  box-shadow: 0 12px 24px rgba(2,12,27,.10);
+  border-color:#d9e2ef;
+  color:var(--text);
+}
 
 .mobileNav{display:none}
 
